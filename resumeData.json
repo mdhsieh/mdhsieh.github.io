@@ -1,0 +1,133 @@
+{
+  "main": {
+    "name": "Michael Hsieh",
+    "occupation": "software engineer",
+    "description": "I currently focus on app development. I have also developed websites and data science projects",
+    "image": "profilepic.png",
+    "bio": "I do Android apps and hope to build iOS and cross-platform mobile apps too. I have a Bachelor's in Computer Science and am currently pursuing a Master's in Software Engineering in San Jose.",
+    "contactmessage": "Here is where you should write your message to readers to have them get in contact with you.",
+    "email": "mdhsieh8@gmail.com",
+    "phone": "925-520-5741",
+    "address": {
+      "street": "1 Washington Square",
+      "city": "San Jose",
+      "state": "CA",
+      "zip": "95192"
+    },
+    "website": "http://www.timbakerdev.com",
+    "resumedownload": "http://timbakerdev.com",
+    "social": [
+      {
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/michael-d-hsieh/",
+        "className": "fa fa-linkedin"
+      },
+      {
+        "name": "github",
+        "url": "http://github.com/mdhsieh",
+        "className": "fa fa-github"
+      }
+    ]
+  },
+  "resume": {
+    "skillmessage": "Here you can create a short write-up of your skills to show off to employers",
+    "education": [
+      {
+        "school": "University?",
+        "degree": "Masters in Beer tasting",
+        "graduated": "April 2007",
+        "description": "Describe your experience at school, what you learned, what useful skills you have acquired etc."
+      },
+      {
+        "school": "School #1 Maybe College?",
+        "degree": "What did you study 101",
+        "graduated": "March 2003",
+        "description": "Describe your experience at school, what you learned, what useful skills you have acquired etc."
+      }
+    ],
+    "work": [
+      {
+        "company": "Awesome Design Studio",
+        "title": "Senior UX God ",
+        "years": "March 2010 - Present",
+        "description": "Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+      },
+      {
+        "company": "Super Cool Studio",
+        "title": "Junior bug fixer",
+        "years": "March 2007 - February 2010",
+        "description": "Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+      }
+    ],
+    "skills": [
+      {
+        "name": "Git",
+        "level": "60%"
+      },
+      {
+        "name": "Illustrator",
+        "level": "55%"
+      },
+      {
+        "name": "ReactJs",
+        "level": "50%"
+      },
+      {
+        "name": "CSS",
+        "level": "90%"
+      },
+      {
+        "name": "HTML5",
+        "level": "80%"
+      },
+      {
+        "name": "VueJs",
+        "level": "50%"
+      },
+      {
+        "name": "MongoDB",
+        "level": "80%"
+      }
+    ]
+  },
+  "portfolio": {
+    "projects": [
+      {
+        "title": "Place Tracker",
+        "category": "Keep track of places you've visited",
+        "image": "place-tracker.png",
+        "url": "https://play.google.com/store/apps/details?id=com.michaelhsieh.placetracker"
+      },
+      {
+        "title": "Writing Improv",
+        "category": "Improve your creative writing skills",
+        "image": "writing-improv.png",
+        "url": "https://github.com/mdhsieh/writing-improv"
+      },
+      {
+        "title": "Popular Movies",
+        "category": "View, sort, and save info on popular movies",
+        "image": "popular-movies.png",
+        "url": "https://github.com/mdhsieh/popular-movies"
+      },
+      {
+        "title": "Baking app",
+        "category": "Phone and tablet-supported app displaying various baking recipes",
+        "image": "baking-app.png",
+        "url": "https://github.com/mdhsieh/baking-app"
+      }
+    ]
+  },
+  "testimonials": {
+    "testimonials": [
+      {
+        "text": "Here you should write some nice things that someone has said about you. No lies though, employers can tell when you are lying.",
+        "user": "Kareem Abdul Jabbar"
+      },
+      {
+        "text": "That Tim Baker must be one of the most brilliant developers I've ever met! It is amazing that nobody has hired him yet. Hey you, you should hire this guy, he may be fresh out of University and have zero on the job experience but I am confident that he will be one of your best developers in no time!",
+        "user": "Steve Wozniak... impersonator"
+      }
+    ]
+  }
+}
