@@ -2,7 +2,7 @@
   "name": "personalportfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mdhsieh.github.io/portfolio",
+  "homepage": "https://mdhsieh.github.io",
   "dependencies": {
     "jquery": "^3.2.1",
     "react": "^16.2.0",
