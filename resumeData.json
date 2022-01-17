@@ -2,9 +2,9 @@
   "main": {
     "name": "Michael Hsieh",
     "occupation": "software engineer",
-    "description": "I currently focus on app development. I have also developed websites and data science projects",
+    "description": "I currently focus on app development and machine learning. I have also developed websites and data science projects",
     "image": "profilepic.png",
-    "bio": "I make Android apps and hope to build iOS and cross-platform mobile apps too. I have a Bachelor's in Computer Science and am pursuing a Master's in Software Engineering.",
+    "bio": "I make Android and iOS apps. I have a Bachelor's in Computer Science and am pursuing a Master's in Software Engineering, specializing in Data Science.",
     "contactmessage": "Here is where you should write your message to readers to have them get in contact with you.",
     "email": "mdhsieh8@gmail.com",
     "phone": "925-520-5741",
@@ -102,7 +102,7 @@
         "title": "Writing Improv",
         "category": "Improve your creative writing skills",
         "image": "writing-improv.png",
-        "url": "https://github.com/mdhsieh/writing-improv"
+        "url": "https://play.google.com/store/apps/details?id=com.michaelhsieh.writingimprov"
       },
       {
         "title": "Popular Movies",
