@@ -4,7 +4,7 @@
     "occupation": "software engineer",
     "description": "I currently focus on app development and machine learning. I have also developed websites and data science projects",
     "image": "profilepic.png",
-    "bio": "I make Android and iOS apps. I have a Bachelor's in Computer Science and am pursuing a Master's in Software Engineering, specializing in Data Science.",
+    "bio": "Ever since I was a kid, I've always been fascinated by high tech and building cool things that make a positive impact in people's lives. Following that interest, I've explored all kinds of different tech subfields, including frontend web development, backend, mobile apps, robotics software, data science, and even artificial intelligence. Right now, I make Android and iOS apps. I received a B.S. in Computer Science from the University of California, Santa Cruz, and an M.S. in Software Engineering from San Jose State University, specializing in Data Science.",
     "contactmessage": "Here is where you should write your message to readers to have them get in contact with you.",
     "email": "mdhsieh8@gmail.com",
     "phone": "925-520-5741",
@@ -93,6 +93,12 @@
   "portfolio": {
     "projects": [
       {
+        "title": "Hacker News Reader",
+        "category": "A convenient way to read stories from tech news website Hacker News (HN)",
+        "image": "hn-reader.png",
+        "url": "https://apps.apple.com/app/hnr-hacker-news-reader/id6443591042"
+      },
+      {
         "title": "Place Tracker",
         "category": "Keep track of places you've visited",
         "image": "place-tracker.png",
@@ -109,12 +115,6 @@
         "category": "View, sort, and save info on popular movies",
         "image": "popular-movies.png",
         "url": "https://github.com/mdhsieh/popular-movies"
-      },
-      {
-        "title": "Baking app",
-        "category": "Phone and tablet-supported app displaying various baking recipes",
-        "image": "baking-app.png",
-        "url": "https://github.com/mdhsieh/baking-app"
       }
     ]
   },
