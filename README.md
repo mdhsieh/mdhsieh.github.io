@@ -27,5 +27,5 @@ npm start
 Deploy changes
 
 ```
-npm deploy
+npm run deploy
 ```
