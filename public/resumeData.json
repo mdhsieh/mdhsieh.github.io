@@ -4,7 +4,7 @@
     "occupation": "software engineer",
     "description": "I currently focus on app development and machine learning. I have also developed websites and data science projects",
     "image": "profilepic.png",
-    "bio": "I make Android and iOS apps. I have a Bachelor's in Computer Science and am pursuing a Master's in Software Engineering, specializing in Data Science.",
+    "bio": "Something about me",
     "contactmessage": "Here is where you should write your message to readers to have them get in contact with you.",
     "email": "mdhsieh8@gmail.com",
     "phone": "925-520-5741",
@@ -14,8 +14,6 @@
       "state": "CA",
       "zip": "95192"
     },
-    "website": "http://www.timbakerdev.com",
-    "resumedownload": "http://timbakerdev.com",
     "social": [
       {
         "name": "linkedin",
@@ -29,69 +27,14 @@
       }
     ]
   },
-  "resume": {
-    "skillmessage": "Here you can create a short write-up of your skills to show off to employers",
-    "education": [
-      {
-        "school": "University?",
-        "degree": "Masters in Beer tasting",
-        "graduated": "April 2007",
-        "description": "Describe your experience at school, what you learned, what useful skills you have acquired etc."
-      },
-      {
-        "school": "School #1 Maybe College?",
-        "degree": "What did you study 101",
-        "graduated": "March 2003",
-        "description": "Describe your experience at school, what you learned, what useful skills you have acquired etc."
-      }
-    ],
-    "work": [
-      {
-        "company": "Awesome Design Studio",
-        "title": "Senior UX God ",
-        "years": "March 2010 - Present",
-        "description": "Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
-      },
-      {
-        "company": "Super Cool Studio",
-        "title": "Junior bug fixer",
-        "years": "March 2007 - February 2010",
-        "description": "Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
-      }
-    ],
-    "skills": [
-      {
-        "name": "Git",
-        "level": "60%"
-      },
-      {
-        "name": "Illustrator",
-        "level": "55%"
-      },
-      {
-        "name": "ReactJs",
-        "level": "50%"
-      },
-      {
-        "name": "CSS",
-        "level": "90%"
-      },
-      {
-        "name": "HTML5",
-        "level": "80%"
-      },
-      {
-        "name": "VueJs",
-        "level": "50%"
-      },
-      {
-        "name": "MongoDB",
-        "level": "80%"
-      }
-    ]
-  },
   "portfolio": {
     "projects": [
+      {
+        "title": "Hacker News Reader",
+        "category": "A convenient way to read stories from tech news website Hacker News (HN)",
+        "image": "hn-reader.png",
+        "url": "https://apps.apple.com/app/hnr-hacker-news-reader/id6443591042"
+      },
       {
         "title": "Place Tracker",
         "category": "Keep track of places you've visited",
@@ -109,12 +52,6 @@
         "category": "View, sort, and save info on popular movies",
         "image": "popular-movies.png",
         "url": "https://github.com/mdhsieh/popular-movies"
-      },
-      {
-        "title": "Baking app",
-        "category": "Phone and tablet-supported app displaying various baking recipes",
-        "image": "baking-app.png",
-        "url": "https://github.com/mdhsieh/baking-app"
       }
     ]
   },
