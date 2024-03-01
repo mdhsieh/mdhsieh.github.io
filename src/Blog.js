@@ -75,9 +75,9 @@ fetch(post1)
   });
 
 const sidebar = {
-  title: 'About',
+  title: 'About Me',
   description:
-    'Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.',
+    'I\'m Michael Hsieh, a software engineer.',
   archives: [
     { title: 'February 2024', url: '#' },
   ],
@@ -94,7 +94,7 @@ export default function Blog() {
     <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
       <Container maxWidth="lg">
-        <Header title="Michael Hsieh's Blog" sections={sections} />
+        <Header title="Michael's Blog" sections={sections} />
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={4}>
