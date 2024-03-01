@@ -58,7 +58,7 @@ fetch(post1)
     posts.push(text);
   });
 
-  fetch(post2)
+fetch(post2)
   .then(response => response.text())
   .then(text => {
     // Logs a string of Markdown content.
@@ -66,7 +66,7 @@ fetch(post1)
     posts.push(text);
   });
 
-  fetch(post3)
+fetch(post3)
   .then(response => response.text())
   .then(text => {
     // Logs a string of Markdown content.
@@ -77,7 +77,7 @@ fetch(post1)
 const sidebar = {
   title: 'About Me',
   description:
-    'I\'m Michael Hsieh, a software engineer.',
+    'I\'m Michael Hsieh, a software engineer. I code, write, and share what I find useful.',
   archives: [
     { title: 'February 2024', url: '#' },
   ],
@@ -86,7 +86,6 @@ const sidebar = {
   ],
 };
 
-// TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
 export default function Blog() {
@@ -103,7 +102,7 @@ export default function Blog() {
             ))}
           </Grid>
           <Grid container spacing={5} sx={{ mt: 3 }}>
-            <Main title="From the firehose" posts={posts} />
+            <Main title="Writing" posts={posts} />
             <Sidebar
               title={sidebar.title}
               description={sidebar.description}
