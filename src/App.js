@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 import $ from 'jquery';
 import './App.css';
-import About from './Components/About';
-import Portfolio from './Components/Portfolio';
-import Articles from './Components/Articles';
 import Blog from './Blog'
 
 class App extends Component {
@@ -42,9 +39,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <Articles/>
-        <Portfolio data={this.state.websiteData.portfolio}/>
-        <About data={this.state.websiteData.main}/> */}
         <Blog/>
       </div>
     );
