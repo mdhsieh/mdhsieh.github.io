@@ -34,36 +34,6 @@
         "category": "A convenient way to read stories from tech news website Hacker News (HN)",
         "image": "hn-reader.png",
         "url": "https://apps.apple.com/app/hnr-hacker-news-reader/id6443591042"
-      },
-      {
-        "title": "Place Tracker",
-        "category": "Keep track of places you've visited",
-        "image": "place-tracker.png",
-        "url": "https://play.google.com/store/apps/details?id=com.michaelhsieh.placetracker"
-      },
-      {
-        "title": "Writing Improv",
-        "category": "Improve your creative writing skills",
-        "image": "writing-improv.png",
-        "url": "https://play.google.com/store/apps/details?id=com.michaelhsieh.writingimprov"
-      },
-      {
-        "title": "Popular Movies",
-        "category": "View, sort, and save info on popular movies",
-        "image": "popular-movies.png",
-        "url": "https://github.com/mdhsieh/popular-movies"
-      }
-    ]
-  },
-  "testimonials": {
-    "testimonials": [
-      {
-        "text": "Here you should write some nice things that someone has said about you. No lies though, employers can tell when you are lying.",
-        "user": "Kareem Abdul Jabbar"
-      },
-      {
-        "text": "That Tim Baker must be one of the most brilliant developers I've ever met! It is amazing that nobody has hired him yet. Hey you, you should hire this guy, he may be fresh out of University and have zero on the job experience but I am confident that he will be one of your best developers in no time!",
-        "user": "Steve Wozniak... impersonator"
       }
     ]
   }
