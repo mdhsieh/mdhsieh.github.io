@@ -61,7 +61,7 @@ fetch(post1)
 const sidebar = {
   title: 'About Me',
   description:
-    'I\'m Michael Hsieh, a software engineer. I code, write, and share what I find useful.',
+    'I\'m Michael Hsieh, a software engineer. I\'ve been coding since I was 16, but I believe number of years doing stuff is not as good a benchmark as what you\'ve done during that time. To that end, I make software, write articles, and share what I\'ve learned with other people who may need a little help in their journey like me. Thanks for stopping by my blog.',
   archives: [
     { title: 'February 2024', url: '#' },
   ],
