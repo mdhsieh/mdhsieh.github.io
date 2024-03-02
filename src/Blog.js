@@ -21,11 +21,11 @@ const sections = [
 ];
 
 const mainFeaturedPost = {
-  title: 'Title of a longer featured blog post',
+  title: 'Customized Streaks Calendar with FSCalendar',
   description:
-    "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
-  image: 'https://source.unsplash.com/random?wallpapers',
-  imageText: 'main image description',
+    "Make a calendar in iOS that has colors filled according to a user's progress. This could be useful if your app needs to display a user's daily achievements or streaks.",
+  image: 'images/writing/fscalendar_main.jpg',
+  imageText: 'Customized streaks calendar',
   linkText: 'Continue reading…',
 };
 
