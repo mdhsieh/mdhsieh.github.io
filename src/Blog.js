@@ -58,22 +58,6 @@ fetch(post1)
     posts.push(text);
   });
 
-fetch(post2)
-  .then(response => response.text())
-  .then(text => {
-    // Logs a string of Markdown content.
-    // Now you could use e.g. <rexxars/react-markdown> to render it.
-    posts.push(text);
-  });
-
-fetch(post3)
-  .then(response => response.text())
-  .then(text => {
-    // Logs a string of Markdown content.
-    // Now you could use e.g. <rexxars/react-markdown> to render it.
-    posts.push(text);
-  });
-
 const sidebar = {
   title: 'About Me',
   description:
