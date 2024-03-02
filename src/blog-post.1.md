@@ -223,61 +223,61 @@ Go back to FSCalendar. You can add customizations by implementing protocols in t
 
 ```
 //MARK: - Coordinator
-    class Coordinator: NSObject, FSCalendarDelegate, FSCalendarDelegateAppearance {
-            
-        var parent: FSCalendarView
+class Coordinator: NSObject, FSCalendarDelegate, FSCalendarDelegateAppearance {
         
-        var achievements: Achievements
-        
-        init(_ calender: FSCalendarView, achievements: Achievements) {
-            self.parent = calender
-            self.achievements = achievements
-        }
-        
-        func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-            self.parent.selectedDate = date
-        }
-        
-        func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, fillDefaultColorFor date: Date) -> UIColor? {
-            // Color days in current month up to and including today
-            // Must be after or at first start date
-            if isDateInMonth(date: date, targetMonth: calendar.currentPage) && date <= Date() && isOnOrAfterAchievementStartDate(date: date) {
-                let dailyPoints = achievements.totalPoints(on: date)
-                if dailyPoints == 0 {
-                    return .gray
-                } else if dailyPoints >= 100 {
-                    return .systemGreen
-                } else {
-                    return .systemRed
-                }
+    var parent: FSCalendarView
+    
+    var achievements: Achievements
+    
+    init(_ calender: FSCalendarView, achievements: Achievements) {
+        self.parent = calender
+        self.achievements = achievements
+    }
+    
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        self.parent.selectedDate = date
+    }
+    
+    func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, fillDefaultColorFor date: Date) -> UIColor? {
+        // Color days in current month up to and including today
+        // Must be after or at first start date
+        if isDateInMonth(date: date, targetMonth: calendar.currentPage) && date <= Date() && isOnOrAfterAchievementStartDate(date: date) {
+            let dailyPoints = achievements.totalPoints(on: date)
+            if dailyPoints == 0 {
+                return .gray
+            } else if dailyPoints >= 100 {
+                return .systemGreen
             } else {
-                return nil
+                return .systemRed
             }
-        }
-        
-        // White to contrast well with fill colors, default would be black
-        func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, titleDefaultColorFor date: Date) -> UIColor? {
-            if isDateInMonth(date: date, targetMonth: calendar.currentPage) && date <= Date() && isOnOrAfterAchievementStartDate(date: date) {
-                return .white
-            } else {
-                return nil
-            }
-        }
-        
-        // Need reload to have fill colors display correctly after calendar page changes
-        func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
-            calendar.reloadData()
-        }
-        
-        //MARK: - Other
-        func isDateInMonth(date: Date, targetMonth: Date) -> Bool {
-            return Calendar.current.isDate(date, equalTo: targetMonth, toGranularity: .month)
-        }
-        
-        func isOnOrAfterAchievementStartDate(date: Date) -> Bool {
-            return (date >= achievements.startDate || Calendar.current.isDate(date, equalTo: achievements.startDate, toGranularity: .day))
+        } else {
+            return nil
         }
     }
+    
+    // White to contrast well with fill colors, default would be black
+    func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, titleDefaultColorFor date: Date) -> UIColor? {
+        if isDateInMonth(date: date, targetMonth: calendar.currentPage) && date <= Date() && isOnOrAfterAchievementStartDate(date: date) {
+            return .white
+        } else {
+            return nil
+        }
+    }
+    
+    // Need reload to have fill colors display correctly after calendar page changes
+    func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
+        calendar.reloadData()
+    }
+    
+    //MARK: - Other
+    func isDateInMonth(date: Date, targetMonth: Date) -> Bool {
+        return Calendar.current.isDate(date, equalTo: targetMonth, toGranularity: .month)
+    }
+    
+    func isOnOrAfterAchievementStartDate(date: Date) -> Bool {
+        return (date >= achievements.startDate || Calendar.current.isDate(date, equalTo: achievements.startDate, toGranularity: .day))
+    }
+}
 ```
 
 To change each day's color, you can implement _FSCalendarDelegateAppearance_. You can then implement 2 methods, with _fillDefaultColorFor_ and _titleDefaultColorFor_.
@@ -292,6 +292,7 @@ Similarly, because our fill colors have changed, we want to set the number color
 In my sample dataset, Jan 2024 and Feb 2024 are the months affected by custom colors. Nothing happens Jan 2024, while Feb 2024 has 1 success, 1 fail, and then a 2-day success streak.
 
 It's important to implement **_calendarCurrentPageDidChange_** and write:
+
 ```
 calendar.reloadData()
 ```
@@ -304,6 +305,7 @@ I will use that to show the selected day's individual Sessions later.
 
 ## Displaying FSCalendar
 In your ContentView, display FSCalendar:
+
 ```
 import SwiftUI
 
