@@ -1,7 +1,7 @@
 # Customized Streaks Calendar with FSCalendar
 _Feb 29, 2024_
 
-<img src="images/writing/fscalendar_main.jpg" alt="fscalendar_main_image" width="500" style="display: block; margin: 0 auto" />
+<img src="images/writing/fscalendar_main.jpg" alt="fscalendar_main_image" width="600"/>
 
 ## Purpose
 Sometimes your iOS app needs a custom, monthly calendar on the screen. If you use SwiftUI, a default choice is CalendarView, however that's only available in iOS 16 and up. If you want to support older devices, one option is the library [FSCalendar](https://github.com/WenchaoD/FSCalendar).
@@ -9,7 +9,7 @@ Sometimes your iOS app needs a custom, monthly calendar on the screen. If you us
 Here I'll give a quick tutorial on FSCalendar and SwiftUI to make a calendar that has colors filled according to a user's progress. This could be useful if your app needs to display a user's daily achievements or streaks, like reaching a certain number of daily points.
 
 The final result will look like this:
-<img src="images/writing/fscalendar_example_demo.gif" alt="fscalendar_demo" width="400" style="display: block; margin: 0 auto" />
+<img src="images/writing/fscalendar_example_demo.gif" alt="fscalendar_demo" />
 
 FSCalendar with custom colors and selected day's sessions
 
@@ -216,7 +216,7 @@ You need to go to Pods -> Targets -> FSCalendar, then in "minimum deployments", 
 
 In my case it was 17.0.
 
-<img src="images/writing/fscalendar_update_min_deployment.png" alt="fscalendar_update_min_deployment" width="600" style="display: block; margin: 0 auto" />
+<img src="images/writing/fscalendar_update_min_deployment.png" alt="fscalendar_update_min_deployment" width="600"/>
 
 ## FSCalendar Coordinator
 Go back to FSCalendar. You can add customizations by implementing protocols in the Coordinator.
@@ -325,7 +325,7 @@ struct ContentView: View {
 
 That will give you a custom calendar.
 
-<img src="images/writing/fscalendar_initial.png" alt="fscalendar_initial" width="400" style="display: block; margin: 0 auto" />
+<img src="images/writing/fscalendar_initial.png" alt="fscalendar_initial" width="400" />
 
 ## Session Cards
 
@@ -417,4 +417,4 @@ After that either show a Text stating there's no Sessions to show, or show the l
 
 Nice. You're done. Thanks for reading this far.
 
-<img src="images/writing/fscalendar_final.png" alt="fscalendar_final" width="400" style="display: block; margin: 0 auto" />
+<img src="images/writing/fscalendar_final.png" alt="fscalendar_final" width="400" />
