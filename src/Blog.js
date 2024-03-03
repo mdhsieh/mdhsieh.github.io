@@ -66,7 +66,7 @@ const sidebar = {
     { title: 'February 2024', url: '#' },
   ],
   social: [
-    { name: 'GitHub', icon: GitHubIcon },
+    { name: 'GitHub', icon: GitHubIcon, url: 'https://github.com/mdhsieh/' },
   ],
 };
 
