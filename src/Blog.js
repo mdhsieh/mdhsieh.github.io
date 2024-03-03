@@ -68,6 +68,7 @@ const sidebar = {
   social: [
     { name: 'GitHub', icon: GitHubIcon, url: 'https://github.com/mdhsieh/' },
   ],
+  image: 'images/profilepic.png',
 };
 
 const defaultTheme = createTheme();
@@ -92,6 +93,7 @@ export default function Blog() {
               description={sidebar.description}
               archives={sidebar.archives}
               social={sidebar.social}
+              image={sidebar.image}
             />
           </Grid>
         </main>
