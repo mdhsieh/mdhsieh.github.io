@@ -49,7 +49,7 @@ export default function Blog() {
     ).then(texts => {
       setPosts(texts)
     });
-  })
+  }, [])
 
   return (
     <Router>
