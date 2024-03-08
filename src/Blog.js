@@ -13,11 +13,12 @@ import Footer from './Footer';
 import post1 from './blog-post.1.md';
 import post2 from './blog-post.2.md';
 import post3 from './blog-post.3.md';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 const sections = [
-  { title: 'Apps', url: '#' },
-  { title: 'Writing', url: '#' },
-  { title: 'About', url: '#' },
+  { title: 'Apps', url: '/apps' },
+  { title: 'Writing', url: '/' },
+  { title: 'About', url: '/about' },
 ];
 
 const mainFeaturedPost = {
@@ -75,33 +76,41 @@ const defaultTheme = createTheme();
 
 export default function Blog() {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <CssBaseline />
-      <Container maxWidth="lg">
-        <Header title="Michael's Blog" sections={sections} />
-        <main>
-          <MainFeaturedPost post={mainFeaturedPost} />
-          {/* <Grid container spacing={4}>
-            {featuredPosts.map((post) => (
-              <FeaturedPost key={post.title} post={post} />
-            ))}
-          </Grid> */}
-          <Grid container spacing={5} sx={{ mt: 3 }}>
-            <Main title="Writing" posts={posts} />
-            <Sidebar
-              title={sidebar.title}
-              description={sidebar.description}
-              archives={sidebar.archives}
-              social={sidebar.social}
-              image={sidebar.image}
-            />
-          </Grid>
-        </main>
-      </Container>
-      <Footer
-        title=""
-        description=""
-      />
-    </ThemeProvider>
+    <Router>
+      <ThemeProvider theme={defaultTheme}>
+        <CssBaseline />
+        <Container maxWidth="lg">
+          <Header title="Michael's Blog" sections={sections} />
+          <main>
+            <MainFeaturedPost post={mainFeaturedPost} />
+            <Grid container spacing={4}>
+              {featuredPosts.map((post) => (
+                <FeaturedPost key={post.title} post={post} />
+              ))}
+            </Grid>
+            <Routes>
+              <Route path="/" element={
+                <Grid container spacing={5} sx={{ mt: 3 }}>
+                  <Main title="Writing" posts={posts} />
+                </Grid>
+              }></Route>
+              <Route path="/about" element={
+                  <Sidebar
+                    title={sidebar.title}
+                    description={sidebar.description}
+                    archives={sidebar.archives}
+                    social={sidebar.social}
+                    image={sidebar.image}
+                  />
+              }></Route>
+            </Routes>
+          </main>
+        </Container>
+        <Footer
+          title=""
+          description=""
+        />
+      </ThemeProvider>
+    </Router>
   );
 }

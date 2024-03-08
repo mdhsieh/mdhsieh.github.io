@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
+import {Link as RouterLink } from 'react-router-dom';
 
 function Header(props) {
   const { sections, title } = props;
@@ -34,6 +35,8 @@ function Header(props) {
             variant="body2"
             href={section.url}
             sx={{ p: 1, flexShrink: 0 }}
+            component={RouterLink}
+            to={section.url}
           >
             {section.title}
           </Link>
