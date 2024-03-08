@@ -1,17 +1,11 @@
-# New feature
+# Hacker News Reader
 
-_March 14, 2020 by [Tom](/)_
+_Mar 08, 2024_
 
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.
-Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-ut fermentum massa justo sit amet risus.
+My latest iOS app, [HNR - Hacker News Reader](https://apps.apple.com/app/hnr-hacker-news-reader/id6443591042) is available on the App Store.
 
-- Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-- Donec id elit non mi porta gravida at eget metus.
-- Nulla vitae elit libero, a pharetra augue.
+- Simple way to read from the Hacker News website, no login required.
+- Favorite and share your favorite articles.
+- Filter by top 100 or latest articles.
 
-Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum.
-Aenean lacinia bibendum nulla sed consectetur.
-
-Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.
+It's free, no ads, feel free to check it out.
