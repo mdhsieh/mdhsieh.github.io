@@ -81,9 +81,7 @@ export default function Blog() {
           <Header title="Michael's Blog" sections={sections} />
             <Routes>
               <Route path="/" element={
-                <Grid container spacing={5} sx={{ mt: 3 }}>
                   <Main title="Writing" posts={posts} />
-                </Grid>
               }></Route>
               <Route path="/about" element={
                   <Sidebar
