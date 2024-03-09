@@ -8,4 +8,4 @@ My latest iOS app, [HNR - Hacker News Reader](https://apps.apple.com/app/hnr-hac
 - Favorite and share your favorite articles.
 - Filter by top 100 or latest articles.
 
-It's free, no ads, feel free to check it out.
+It's free, feel free to check it out.
