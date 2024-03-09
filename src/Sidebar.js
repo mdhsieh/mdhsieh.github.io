@@ -18,14 +18,7 @@ function Sidebar(props) {
         </Typography>
         <Typography>{description}</Typography>
       </Paper>
-      <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
-        Archives
-      </Typography>
-      {archives.map((archive) => (
-        <Link display="block" variant="body1" href={archive.url} key={archive.title}>
-          {archive.title}
-        </Link>
-      ))}
+     
       <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
         Social
       </Typography>
