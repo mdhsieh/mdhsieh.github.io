@@ -37,16 +37,23 @@ const sidebar = {
 
 const defaultTheme = createTheme();
 
+// Create a path string based off the first couple words in a markdown post,
+// replace any non-alphanumeric characters, like spaces and markdown syntax, with dashes and then
+// remove any leading or trailing dashes
 export const getUrlFromMarkdown = function(text) {
-  return text.substring(0, 15).replace(/\W+/g, '-').toLowerCase()
+  return text
+          .substring(0, 25)
+          .replace(/[^a-z0-9]+/gi, '-')
+          .replace(/^-+/, '').replace(/-+$/, '')
+          .toLowerCase()
 }
 
 export default function Blog() {
   const [posts, setPosts] = useState([])
 
-  useEffect(() => {
-    const postUrls = [post1, post2, post3]
+  const postUrls = [post1, post2, post3]
 
+  useEffect(() => {
     Promise.all(
       postUrls.map(url =>
         fetch(url)

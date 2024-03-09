@@ -23,7 +23,7 @@ function Main(props) {
 
   return (
     <main>
-    <MainFeaturedPost post={mainFeaturedPost} />
+    {posts[0] && <MainFeaturedPost post={mainFeaturedPost} link={getUrlFromMarkdown(posts[0])}/>}
     <Grid
       item
       xs={12}

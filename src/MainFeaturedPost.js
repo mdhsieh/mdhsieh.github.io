@@ -7,7 +7,7 @@ import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
 
 function MainFeaturedPost(props) {
-  const { post } = props;
+  const { post, link } = props;
 
   return (
     <Paper
@@ -49,7 +49,7 @@ function MainFeaturedPost(props) {
             <Typography variant="h5" color="inherit" paragraph>
               {post.description}
             </Typography>
-            <Link variant="subtitle1" href="#">
+            <Link variant="subtitle1" href={link}>
               {post.linkText}
             </Link>
           </Box>
