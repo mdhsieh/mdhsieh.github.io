@@ -51,7 +51,9 @@ export const getUrlFromMarkdown = function(text) {
 export default function Blog() {
   const [posts, setPosts] = useState([])
 
-  const postUrls = [post1, post2, post3]
+  const postUrls = [post1, post2]
+
+  const [appPostUrls, setAppPosts] = useState([])
 
   useEffect(() => {
     Promise.all(
@@ -62,6 +64,13 @@ export default function Blog() {
     ).then(texts => {
       setPosts(texts)
     });
+
+    fetch(post3)
+      .then(res => res.text())
+      .then(text => {
+        setAppPosts([text])
+      });
+
   }, [])
 
   return (
@@ -90,6 +99,12 @@ export default function Blog() {
                   {post}
                 </Markdown>
               }></Route>)}
+               <Route path="/apps" element={
+                appPostUrls[0] &&
+                <Markdown className="markdown" key={appPostUrls[0].substring(0, 40)}>
+                  {appPostUrls[0]}
+                </Markdown>
+              }></Route>
             </Routes>
         </Container>
         <Footer
