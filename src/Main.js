@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
-import Markdown from './Markdown';
+
 import MainFeaturedPost from './MainFeaturedPost';
-import Link from '@mui/material/Link';
+
 import PreviewBlogPost from './PreviewBlogPost';
+import { getUrlFromMarkdown } from './Blog';
 
 function Main(props) {
   const { posts, title } = props;
@@ -38,7 +39,7 @@ function Main(props) {
       </Typography>
       <Divider />
       {posts.map((post) => (
-        <PreviewBlogPost post={post} cutoff={200} key={post.substring(0, 40)}></PreviewBlogPost>
+        <PreviewBlogPost post={post} cutoff={200} link={getUrlFromMarkdown(post)} key={post.substring(0, 40)}></PreviewBlogPost>
       ))}
     </Grid>
     </main>

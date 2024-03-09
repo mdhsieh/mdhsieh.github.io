@@ -14,6 +14,8 @@ import post3 from './blog-post.3.md';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
+import Markdown from './Markdown';
+
 const sections = [
   { title: 'Apps', url: '/apps' },
   { title: 'Writing', url: '/' },
@@ -34,6 +36,10 @@ const sidebar = {
 };
 
 const defaultTheme = createTheme();
+
+export const getUrlFromMarkdown = function(text) {
+  return text.substring(0, 15).replace(/\W+/g, '-').toLowerCase()
+}
 
 export default function Blog() {
   const [posts, setPosts] = useState([])
@@ -72,6 +78,11 @@ export default function Blog() {
                     image={sidebar.image}
                   />
               }></Route>
+              {posts.map(post => <Route key={post.substring(0, 40)} path={getUrlFromMarkdown(post) } element={
+                <Markdown className="markdown">
+                  {post}
+                </Markdown>
+              }></Route>)}
             </Routes>
         </Container>
         <Footer

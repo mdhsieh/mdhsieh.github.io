@@ -2,7 +2,7 @@ import Markdown from './Markdown';
 import Link from '@mui/material/Link';
 
 function PreviewBlogPost(props) {
-    const { post, cutoff } = props;
+    const { post, cutoff, link } = props;
 
     return (
         <div key={post.substring(0, 40)}>
@@ -11,7 +11,7 @@ function PreviewBlogPost(props) {
           </Markdown>
           <Link
             variant="body1"
-            href=""
+            href={link}
           >
             Continue reading...
           </Link>
