@@ -417,6 +417,6 @@ There's a new variable and function to get the sessions from a selected day. You
 
 After that either show a Text stating there's no Sessions to show, or show the list using a horizontal ScrollView and a horizontal stack.
 
-Nice. You're done. Thanks for reading this far.
+Nice. You're done.
 
 <img src="images/writing/fscalendar_final.png" alt="fscalendar_final" width="400" />
