@@ -1,0 +1,40 @@
+{
+  "main": {
+    "name": "Michael Hsieh",
+    "occupation": "software engineer",
+    "description": "I currently focus on app development and machine learning. I have also developed websites and data science projects",
+    "image": "profilepic.png",
+    "bio": "Something about me",
+    "contactmessage": "Here is where you should write your message to readers to have them get in contact with you.",
+    "email": "mdhsieh8@gmail.com",
+    "phone": "925-520-5741",
+    "address": {
+      "street": "1 Washington Square",
+      "city": "San Jose",
+      "state": "CA",
+      "zip": "95192"
+    },
+    "social": [
+      {
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/michael-d-hsieh/",
+        "className": "fa fa-linkedin"
+      },
+      {
+        "name": "github",
+        "url": "http://github.com/mdhsieh",
+        "className": "fa fa-github"
+      }
+    ]
+  },
+  "portfolio": {
+    "projects": [
+      {
+        "title": "Hacker News Reader",
+        "category": "A convenient way to read stories from tech news website Hacker News (HN)",
+        "image": "hn-reader.png",
+        "url": "https://apps.apple.com/app/hnr-hacker-news-reader/id6443591042"
+      }
+    ]
+  }
+}
