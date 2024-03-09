@@ -25,7 +25,7 @@ const sections = [
 const sidebar = {
   title: 'About Me',
   description:
-    'I\'m Michael Hsieh, a software engineer. I\'ve been coding since I was 16, but I believe number of years doing stuff is not as good a benchmark as what you\'ve done during that time. To that end, I make software, write articles, and share what I\'ve learned with other people who may need a little help in their journey like me. Thanks for stopping by my blog.',
+    'I\'m Michael Hsieh, a software engineer. My focus as of early 2024 is mobile app development. I\'ve been coding since I was 16, but I believe number of years doing stuff is not as good a benchmark as what you\'ve done during that time. To that end, I make software, write articles, and share what I\'ve learned with other people who may need a little help in their journey like me. Thanks for stopping by my blog.',
   archives: [
     { title: 'February 2024', url: '#' },
   ],
@@ -50,10 +50,10 @@ export const getUrlFromMarkdown = function(text) {
 
 export default function Blog() {
   const [posts, setPosts] = useState([])
-
   const postUrls = [post1, post2]
 
-  const [appPostUrls, setAppPosts] = useState([])
+  const [appPosts, setAppPosts] = useState([])
+  const appPostUrls = [post3]
 
   useEffect(() => {
     Promise.all(
@@ -63,14 +63,20 @@ export default function Blog() {
       )
     ).then(texts => {
       setPosts(texts)
+      console.log(texts)
     });
+  }, [])
 
-    fetch(post3)
-      .then(res => res.text())
-      .then(text => {
-        setAppPosts([text])
-      });
-
+  useEffect(() => {
+    Promise.all(
+      appPostUrls.map(url =>
+        fetch(url)
+          .then(res => res.text())
+      )
+    ).then(texts => {
+      setAppPosts(texts)
+      console.log(texts)
+    });
   }, [])
 
   return (
@@ -92,16 +98,11 @@ export default function Blog() {
                     image={sidebar.image}
                   />
               }></Route>
-              {posts.map(post => <Route key={post.substring(0, 40)} path={getUrlFromMarkdown(post) } element={
-                <Markdown className="markdown">
-                  {post}
-                </Markdown>
-              }></Route>)}
                <Route path="/apps" element={
-                appPostUrls[0] &&
-                <Markdown className="markdown" key={appPostUrls[0].substring(0, 40)}>
-                  {appPostUrls[0]}
-                </Markdown>
+                  appPosts && appPosts.map(appPost =>
+                  <Markdown className="markdown" key={appPost.substring(0, 40)}>
+                    {appPost}
+                  </Markdown>)
               }></Route>
             </Routes>
         </Container>

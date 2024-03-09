@@ -23,7 +23,7 @@ function Main(props) {
 
   return (
     <main>
-    {posts[0] && <MainFeaturedPost post={mainFeaturedPost} link={getUrlFromMarkdown(posts[0])}/>}
+    {posts[0] && <MainFeaturedPost post={mainFeaturedPost} link={"/" + 0}/>}
     <Grid
       item
       xs={12}
@@ -39,7 +39,7 @@ function Main(props) {
       </Typography>
       <Divider />
       {posts.map((post) => (
-        <PreviewBlogPost post={post} cutoff={200} link={getUrlFromMarkdown(post)} key={post.substring(0, 40)}></PreviewBlogPost>
+        <PreviewBlogPost post={post} cutoff={200} link={"#"} key={post.substring(0, 40)}></PreviewBlogPost>
       ))}
     </Grid>
     </main>
