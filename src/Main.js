@@ -4,9 +4,9 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import Markdown from './Markdown';
-
-import FeaturedPost from './FeaturedPost';
 import MainFeaturedPost from './MainFeaturedPost';
+import Link from '@mui/material/Link';
+import PreviewBlogPost from './PreviewBlogPost';
 
 function Main(props) {
   const { posts, title } = props;
@@ -20,33 +20,9 @@ function Main(props) {
     linkText: 'Continue reading…',
   };
 
-  const featuredPosts = [
-    {
-      title: 'Featured post',
-      date: 'Nov 12',
-      description:
-        'This is a wider card with supporting text below as a natural lead-in to additional content.',
-      image: 'https://source.unsplash.com/random?wallpapers',
-      imageLabel: 'Image Text',
-    },
-    {
-      title: 'Post title',
-      date: 'Nov 11',
-      description:
-        'This is a wider card with supporting text below as a natural lead-in to additional content.',
-      image: 'https://source.unsplash.com/random?wallpapers',
-      imageLabel: 'Image Text',
-    },
-  ];
-
   return (
     <main>
     <MainFeaturedPost post={mainFeaturedPost} />
-    {/* <Grid container spacing={4}>
-      {featuredPosts.map((post) => (
-        <FeaturedPost key={post.title} post={post} />
-      ))}
-    </Grid> */}
     <Grid
       item
       xs={12}
@@ -62,9 +38,7 @@ function Main(props) {
       </Typography>
       <Divider />
       {posts.map((post) => (
-        <Markdown className="markdown" key={post.substring(0, 40)}>
-          {post}
-        </Markdown>
+        <PreviewBlogPost post={post} cutoff={200} key={post.substring(0, 40)}></PreviewBlogPost>
       ))}
     </Grid>
     </main>
