@@ -33,7 +33,6 @@ function Header(props) {
             noWrap
             key={section.title}
             variant="h6"
-            href={section.url}
             sx={{ p: 1, flexShrink: 0 }}
             component={RouterLink}
             to={section.url}

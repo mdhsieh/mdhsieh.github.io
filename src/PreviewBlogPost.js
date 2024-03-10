@@ -13,7 +13,6 @@ function PreviewBlogPost(props) {
           </Markdown>
           <Link
             variant="body1"
-            // href={path}
             component={RouterLink}
             to={path}
           >

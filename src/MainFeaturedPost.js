@@ -51,7 +51,6 @@ function MainFeaturedPost(props) {
               {post.description}
             </Typography>
             <Link variant="subtitle1" 
-              // href={path} 
               component={RouterLink} to={path}>
               {post.linkText}
             </Link>
