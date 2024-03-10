@@ -35,18 +35,18 @@ const sidebar = {
   image: 'images/profilepic.png',
 };
 
-const defaultTheme = createTheme();
-
 // Create a path string based off the first couple words in a markdown post,
-// replace any non-alphanumeric characters, like spaces and markdown syntax, with dashes and then
-// remove any leading or trailing dashes
-export const getUrlFromMarkdown = function(text) {
+// replace any non-alphanumeric characters, like spaces and markdown syntax, with dashes, and then
+// remove any leading or trailing dashes.
+export const getPathFromMarkdown = function(text) {
   return text
           .substring(0, 25)
           .replace(/[^a-z0-9]+/gi, '-')
           .replace(/^-+/, '').replace(/-+$/, '')
           .toLowerCase()
 }
+
+const defaultTheme = createTheme();
 
 export default function Blog() {
   const [posts, setPosts] = useState([])
@@ -63,7 +63,6 @@ export default function Blog() {
       )
     ).then(texts => {
       setPosts(texts)
-      console.log(texts)
     });
   }, [])
 
@@ -75,7 +74,6 @@ export default function Blog() {
       )
     ).then(texts => {
       setAppPosts(texts)
-      console.log(texts)
     });
   }, [])
 
@@ -86,9 +84,11 @@ export default function Blog() {
         <Container maxWidth="lg">
           <Header title="Michael's Blog" sections={sections} />
             <Routes>
+
               <Route path="/" element={
                   <Main title="Writing" posts={posts} />
               }></Route>
+
               <Route path="/about" element={
                   <Sidebar
                     title={sidebar.title}
@@ -98,12 +98,20 @@ export default function Blog() {
                     image={sidebar.image}
                   />
               }></Route>
-               <Route path="/apps" element={
+
+              {posts.map(post => <Route key={post.substring(0, 40)} path={"/" + getPathFromMarkdown(post) } element={
+                <Markdown className="markdown">
+                  {post}
+                </Markdown>
+              }></Route>)}
+
+              <Route path="/apps" element={
                   appPosts && appPosts.map(appPost =>
                   <Markdown className="markdown" key={appPost.substring(0, 40)}>
                     {appPost}
                   </Markdown>)
               }></Route>
+
             </Routes>
         </Container>
         <Footer

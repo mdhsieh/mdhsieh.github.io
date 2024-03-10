@@ -7,7 +7,7 @@ import Divider from '@mui/material/Divider';
 import MainFeaturedPost from './MainFeaturedPost';
 
 import PreviewBlogPost from './PreviewBlogPost';
-import { getUrlFromMarkdown } from './Blog';
+import { getPathFromMarkdown } from './Blog';
 
 function Main(props) {
   const { posts, title } = props;
@@ -23,7 +23,7 @@ function Main(props) {
 
   return (
     <main>
-    {posts[0] && <MainFeaturedPost post={mainFeaturedPost} link={""}/>}
+    {posts[0] && <MainFeaturedPost post={mainFeaturedPost} path={"/" + getPathFromMarkdown(posts[0])}/>}
     <Grid
       item
       xs={12}
@@ -39,7 +39,7 @@ function Main(props) {
       </Typography>
       <Divider />
       {posts.map((post) => (
-        <PreviewBlogPost post={post} cutoff={200} link={""} key={post.substring(0, 40)}></PreviewBlogPost>
+        <PreviewBlogPost post={post} cutoff={200} path={"/" + getPathFromMarkdown(post)} key={post.substring(0, 40)}></PreviewBlogPost>
       ))}
     </Grid>
     </main>
