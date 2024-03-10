@@ -16,6 +16,8 @@ import { useState, useEffect } from 'react'
 
 import Markdown from './Markdown';
 
+import ScrollToTop from "./ScrollToTop";
+
 const sections = [
   { title: 'Apps', url: '/apps' },
   { title: 'Writing', url: '/' },
@@ -79,6 +81,7 @@ export default function Blog() {
 
   return (
     <Router>
+      <ScrollToTop />
       <ThemeProvider theme={defaultTheme}>
         <CssBaseline />
         <Container maxWidth="lg">
