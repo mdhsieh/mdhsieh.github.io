@@ -29,8 +29,6 @@ const sidebar = {
   description:
     `I\'m Michael Hsieh, a software engineer. My focus as of early 2024 is mobile app development.
 
-My path through tech has been anything but linear, ranging from apps, to websites, machine learning, cloud projects, robotics, and games. I\'ve been in a bunch of roles in both large and small companies, like developer, researcher, unofficial manager, and teacher. 
-    
 I\'ve been coding since I was 16, but I believe number of years doing stuff is not as good a benchmark as what you\'ve done during that time. 
 
 To that end, I make software, write articles, and share what I\'ve learned with other people who may need a little help in their journey like me. Thanks for stopping by my blog.`,
