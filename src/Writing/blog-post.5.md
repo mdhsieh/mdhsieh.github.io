@@ -10,7 +10,7 @@ This post shows how to use Firebase to make a password account in an iOS app. Th
 
 <img src="images/writing/setup_firebase_demo.gif" alt="setup_firebase_demo" width="400" />
 
-(Example app Firebase password account)
+#### Example app Firebase password account
 
 This post is part 2 in a series. Final project code is [here](https://github.com/mdhsieh/sign-in-options-example):
 
@@ -136,7 +136,7 @@ This new SwiftUI file has a Text and a bar button item to log out when it’s ta
 
 <img src="images/writing/home_screen.png" alt="home_screen" width="400" />
 
-(Home Screen)
+#### Home Screen
 
 ## Switch Between Create Account/Home
 
@@ -364,7 +364,7 @@ The screen looks like this:
 
 <img src="images/writing/login_screen.png" alt="login_screen" width="400" />
 
-(Login screen)
+#### Login screen
 
 ## Next Steps
 Now users of your app can have a password account, login, and logout.

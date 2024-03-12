@@ -9,9 +9,10 @@ Sometimes your iOS app needs a custom, monthly calendar on the screen. If you us
 Here I'll give a quick tutorial on FSCalendar and SwiftUI to make a calendar that has colors filled according to a user's progress. This could be useful if your app needs to display a user's daily achievements or streaks, like reaching a certain number of daily points.
 
 The final result will look like this:
+
 <img src="images/writing/fscalendar_example_demo.gif" alt="fscalendar_demo" />
 
-(FSCalendar with custom colors and selected day's sessions)
+#### FSCalendar with custom colors and selected day's sessions
 
 ## Setup
 I used CocoaPods to install the library. Assuming you have a new project:
