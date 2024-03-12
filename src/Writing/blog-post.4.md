@@ -13,7 +13,7 @@ The app uses Swift and SwiftUI. It has create account, login, and logout functio
 
 <img src="images/writing/setup_firebase_demo.gif" alt="setup_firebase_demo" width="400" />
 
-This post is part 1 in a series. Final project code is [here](https://github.com/mdhsieh/sign-in-options-example).
+This post is part 1 in a series. Final project code is [here](https://github.com/mdhsieh/sign-in-options-example):
 
 Setup Firebase Project (Part 1)
 
