@@ -1,5 +1,5 @@
 # Customized Streaks Calendar with FSCalendar
-_Feb 29, 2024_
+_Mar 08, 2024_
 
 <img src="images/writing/fscalendar_main.jpg" alt="fscalendar_main_image" width="600"/>
 
@@ -11,7 +11,7 @@ Here I'll give a quick tutorial on FSCalendar and SwiftUI to make a calendar tha
 The final result will look like this:
 <img src="images/writing/fscalendar_example_demo.gif" alt="fscalendar_demo" />
 
-FSCalendar with custom colors and selected day's sessions
+(FSCalendar with custom colors and selected day's sessions)
 
 ## Setup
 I used CocoaPods to install the library. Assuming you have a new project:
