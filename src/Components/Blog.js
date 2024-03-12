@@ -12,6 +12,7 @@ import post1 from '../Writing/blog-post.1.md';
 import post2 from '../Writing/blog-post.2.md';
 import post3 from '../Writing/blog-post.3.md';
 import post4 from '../Writing/blog-post.4.md';
+import post5 from '../Writing/blog-post.5.md';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
@@ -47,7 +48,7 @@ To that end, I make software, write articles, and share what I\'ve learned with 
 // remove any leading or trailing dashes.
 export const getPathFromMarkdown = function(text) {
   return text
-          .substring(0, 25)
+          .substring(0, 50)
           .replace(/[^a-z0-9]+/gi, '-')
           .replace(/^-+/, '').replace(/-+$/, '')
           .toLowerCase()
@@ -57,7 +58,7 @@ const defaultTheme = createTheme();
 
 export default function Blog() {
   const [posts, setPosts] = useState([])
-  const postUrls = [post1, post2, post4]
+  const postUrls = [post1, post2, post4, post5]
 
   const [appPosts, setAppPosts] = useState([])
   const appPostUrls = [post3]
