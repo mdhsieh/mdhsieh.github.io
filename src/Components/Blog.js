@@ -14,6 +14,7 @@ import post3 from '../Writing/blog-post.3.md';
 import post4 from '../Writing/blog-post.4.md';
 import post5 from '../Writing/blog-post.5.md';
 import post6 from '../Writing/blog-post.6.md';
+import post7 from '../Writing/blog-post.7.md';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
@@ -59,7 +60,7 @@ const defaultTheme = createTheme();
 
 export default function Blog() {
   const [posts, setPosts] = useState([])
-  const postUrls = [post1, post2, post4, post5, post6]
+  const postUrls = [post1, post2, post4, post5, post6, post7]
 
   const [appPosts, setAppPosts] = useState([])
   const appPostUrls = [post3]
