@@ -10,15 +10,7 @@ _Mar 12, 2024_
 
 #### Demo app
 
-This post is part 4 in a series. Final project code is [here](https://github.com/mdhsieh/sign-in-options-example):
-
-[Setup Firebase Project (Part 1)](https://mdhsieh.github.io/setup-firebase)
-
-[Create Password Account (Part 2)](https://mdhsieh.github.io/password-account)
-
-[Apple Sign In (Part 3)](https://mdhsieh.github.io/apple-sign-in)
-
-**Google Sign In (Part 4)**
+This post is part 4 in a series. Final project code is [here](https://github.com/mdhsieh/sign-in-options-example).
 
 ## Setup Google Firebase Authentication
 In the [Firebase console](https://console.firebase.google.com/), go to Authentication tab and select Google:
