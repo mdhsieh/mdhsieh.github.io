@@ -4,7 +4,7 @@ _Mar 11, 2024_
 <img src="images/writing/password_account_main.jpg" alt="password_account_main_image" width="600"/>
 
 ## Intro
-As mentioned in a [previous post](https://mdhsieh.github.io/setup-firebase), [Firebase Authentication](https://firebase.google.com/docs/auth/ios/start[]) from Google’s [Firebase](https://firebase.google.com/) platform lets users of your app sign in with multiple options. This includes an email and password account or Apple account.
+[Firebase Authentication](https://firebase.google.com/docs/auth/ios/start[]) from Google’s [Firebase](https://firebase.google.com/) platform lets users of your app sign in with multiple options. This includes an email and password account or Apple account.
 
 This post shows how to use Firebase to make a password account in an iOS app. The app uses Swift and SwiftUI. It has create account, login, and logout functionality:
 
@@ -12,18 +12,10 @@ This post shows how to use Firebase to make a password account in an iOS app. Th
 
 #### Example app Firebase password account
 
-This post is part 2 in a series. Final project code is [here](https://github.com/mdhsieh/sign-in-options-example):
-
-[Setup Firebase Project (Part 1)](https://mdhsieh.github.io/setup-firebase)
-
-**Create Password Account (Part 2)**
-
-[Apple Sign In (Part 3)](https://mdhsieh.github.io/apple-sign-in)
-
-[Google Sign In (Part 4)](https://mdhsieh.github.io/google-sign-in)
+This post is part 2 in a series. Final project code is [here](https://github.com/mdhsieh/sign-in-options-example).
 
 ## Setup Firebase Project
-If you don’t already have a Firebase project, you can follow my setup steps [here](https://mdhsieh.github.io/setup-firebase).
+This assumes you already have an iOS app linked to a Firebase project.
 
 ## Setup Firebase Authentication
 In the Firebase Console, select "Authentication" to start setting up Firebase Authentication.
@@ -366,7 +358,4 @@ The screen looks like this:
 
 #### Login screen
 
-## Next Steps
 Now users of your app can have a password account, login, and logout.
-
-The [next post](https://mdhsieh.github.io/apple-sign-in) goes over adding a sign in with Apple option.

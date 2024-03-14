@@ -13,15 +13,7 @@ The app uses Swift and SwiftUI. It has create account, login, and logout functio
 
 <img src="images/writing/setup_firebase_demo.gif" alt="setup_firebase_demo" width="400" />
 
-This post is part 1 in a series. Final project code is [here](https://github.com/mdhsieh/sign-in-options-example):
-
-**Setup Firebase Project (Part 1)**
-
-[Create Password Account (Part 2)](https://mdhsieh.github.io/password-account)
-
-[Apple Sign In (Part 3)](https://mdhsieh.github.io/apple-sign-in)
-
-[Google Sign In (Part 4)](https://mdhsieh.github.io/google-sign-in)
+This post is part 1 in a series. Final project code is [here](https://github.com/mdhsieh/sign-in-options-example).
 
 ## Setup Firebase Project
 
@@ -83,7 +75,4 @@ struct Sign_In_Options_ExampleApp: App {
 ```
 
 ## Next Steps
-Now that Firebase is setup, you can work on the UI and [Firebase Authentication](https://mdhsieh.github.io/password-account) for your app.
-
-
-
+Now that Firebase is setup, you can choose different services such as [Firebase Authentication](https://firebase.google.com/docs/auth/ios/start) for your app.
