@@ -4,11 +4,9 @@ _Mar 12, 2024_
 <img src="images/writing/apple_sign_in_main.jpg" alt="apple_sign_in_main" width="600"/>
 
 ## Intro
-In the previous post, I showed how to use [Firebase Authentication](https://firebase.google.com/docs/auth/ios/start) to make a password account in a SwiftUI app.
+In the [previous post](https://mdhsieh.github.io/password-account), I showed how to use [Firebase Authentication](https://firebase.google.com/docs/auth/ios/start) to make a password account in a SwiftUI app.
 
 However, using a password account is a little old-fashioned and inconvenient. You can use a different provider like Apple and do Single Sign On instead.
-
-This post improves the previous app to use Apple to sign in.
 
 <img src="images/writing/apple_sign_in_example.png" alt="apple_sign_in_example" width="400" />
 
@@ -16,13 +14,13 @@ This post improves the previous app to use Apple to sign in.
 
 This post is part 3 in a series. Final project code is [here](https://github.com/mdhsieh/sign-in-options-example):
 
-Setup Firebase Project (Part 1)
+[Setup Firebase Project (Part 1)](https://mdhsieh.github.io/setup-firebase)
 
-Create Password Account (Part 2)
+[Create Password Account (Part 2)](https://mdhsieh.github.io/password-account)
 
-Apple Sign In (Part 3)
+**Apple Sign In (Part 3)**
 
-Google Sign In (Part 4)
+[Google Sign In (Part 4)](https://mdhsieh.github.io/google-sign-in)
 
 ## Setup Apple Firebase Authentication
 In the Firebase console, go to Authentication tab and select Apple
