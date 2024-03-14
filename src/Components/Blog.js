@@ -20,6 +20,8 @@ import { useState, useEffect } from 'react'
 
 import Markdown from './Markdown';
 
+import MarkdownWrapper from './MarkdownWrapper'
+
 import ScrollToTop from "./ScrollToTop";
 
 const sections = [
@@ -45,21 +47,48 @@ To that end, I make software, write articles, and share what I\'ve learned with 
   image: 'images/profilepic.png',
 };
 
-// Create a path string based off the first couple words in a markdown post,
-// replace any non-alphanumeric characters, like spaces and markdown syntax, with dashes, and then
-// remove any leading or trailing dashes.
-export const getPathFromMarkdown = function(text) {
-  return text
-          .substring(0, 50)
-          .replace(/[^a-z0-9]+/gi, '-')
-          .replace(/^-+/, '').replace(/-+$/, '')
-          .toLowerCase()
-}
-
 const defaultTheme = createTheme();
 
 export default function Blog() {
-  const [posts, setPosts] = useState([])
+  const [posts, setPosts] = useState(
+    [
+      { 
+        'id': 'streaks-calendar-fscalendar',
+        'fileUrl': post1,
+        'text': ''
+      },
+      { 
+        'id': 'under-construction',
+        'fileUrl': post2,
+        'text': ''
+      },
+      { 
+        'id': 'hacker-news-reader',
+        'fileUrl': post3,
+        'text': ''
+      },
+      { 
+        'id': 'setup-firebase',
+        'fileUrl': post4,
+        'text': ''
+      },
+      { 
+        'id': 'password-account',
+        'fileUrl': post5,
+        'text': ''
+      },
+      { 
+        'id': 'apple-sign-in',
+        'fileUrl': post6,
+        'text': ''
+      },
+      { 
+        'id': 'google-sign-in',
+        'fileUrl': post7,
+        'text': ''
+      },
+    ]
+  )
   const postUrls = [post1, post2, post4, post5, post6, post7]
 
   const [appPosts, setAppPosts] = useState([])
@@ -70,9 +99,18 @@ export default function Blog() {
       postUrls.map(url =>
         fetch(url)
           .then(res => res.text())
+          .then(data => { 
+            let postWithText = posts.find((element) => {
+              return element.fileUrl === url;
+            })
+            postWithText['text'] = data
+            
+            return postWithText
+          })
       )
-    ).then(texts => {
-      setPosts(texts)
+    )
+    .then(posts => {
+      setPosts(posts)
     });
   }, [])
 
@@ -110,11 +148,9 @@ export default function Blog() {
                   />
               }></Route>
 
-              {posts.map(post => <Route key={post.substring(0, 40)} path={"/" + getPathFromMarkdown(post) } element={
-                <Markdown className="markdown">
-                  {post}
-                </Markdown>
-              }></Route>)}
+              <Route path={"/:id"} element={
+                <MarkdownWrapper posts={posts} />
+              }></Route>
 
               <Route path="/apps" element={
                   appPosts && appPosts.map(appPost =>

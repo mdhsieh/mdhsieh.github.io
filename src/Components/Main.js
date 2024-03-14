@@ -7,7 +7,6 @@ import Divider from '@mui/material/Divider';
 import MainFeaturedPost from './MainFeaturedPost';
 
 import PreviewBlogPost from './PreviewBlogPost';
-import { getPathFromMarkdown } from './Blog';
 
 function Main(props) {
   const { posts, title } = props;
@@ -23,7 +22,7 @@ function Main(props) {
 
   return (
     <main>
-    {posts[0] && <MainFeaturedPost post={mainFeaturedPost} path={"/" + getPathFromMarkdown(posts[0])}/>}
+    {posts.find(post => post['id'] === 'streaks-calendar-fscalendar') && <MainFeaturedPost post={mainFeaturedPost} path={"/" + 'streaks-calendar-fscalendar'}/>}
     <Grid
       item
       xs={12}
@@ -39,7 +38,7 @@ function Main(props) {
       </Typography>
       <Divider />
       {posts.map((post) => (
-        <PreviewBlogPost post={post} cutoff={200} path={"/" + getPathFromMarkdown(post)} key={post.substring(0, 40)}></PreviewBlogPost>
+        <PreviewBlogPost post={post} cutoff={200} path={"/" + post['id']} key={post['id']}></PreviewBlogPost>
       ))}
     </Grid>
     </main>
@@ -47,7 +46,7 @@ function Main(props) {
 }
 
 Main.propTypes = {
-  posts: PropTypes.arrayOf(PropTypes.string).isRequired,
+  posts: PropTypes.arrayOf(PropTypes.object).isRequired,
   title: PropTypes.string.isRequired,
 };
 
