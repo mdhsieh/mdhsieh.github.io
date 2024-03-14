@@ -91,7 +91,13 @@ export default function Blog() {
   )
   const postUrls = [post7, post6, post5, post4, post1, post2]
 
-  const [appPosts, setAppPosts] = useState([])
+  const [appPosts, setAppPosts] = useState([
+    { 
+      'id': 'hn-reader',
+      'fileUrl': post3,
+      'text': ''
+    },
+  ])
   const appPostUrls = [post3]
 
   useEffect(() => {
@@ -119,9 +125,18 @@ export default function Blog() {
       appPostUrls.map(url =>
         fetch(url)
           .then(res => res.text())
+          .then(data => { 
+            let postWithText = posts.find((element) => {
+              return element.fileUrl === url;
+            })
+            postWithText['text'] = data
+            
+            return postWithText
+          })
       )
-    ).then(texts => {
-      setAppPosts(texts)
+    )
+    .then(posts => {
+      setAppPosts(posts)
     });
   }, [])
 
@@ -154,8 +169,8 @@ export default function Blog() {
 
               <Route path="/apps" element={
                   appPosts && appPosts.map(appPost =>
-                  <Markdown className="markdown" key={appPost.substring(0, 40)}>
-                    {appPost}
+                  <Markdown className="markdown" key={appPost['id']}>
+                    {appPost['text']}
                   </Markdown>)
               }></Route>
 
