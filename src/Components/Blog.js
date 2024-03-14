@@ -89,7 +89,7 @@ export default function Blog() {
       },
     ]
   )
-  const postUrls = [post1, post2, post4, post5, post6, post7]
+  const postUrls = [post7, post6, post5, post4, post1, post2]
 
   const [appPosts, setAppPosts] = useState([])
   const appPostUrls = [post3]
