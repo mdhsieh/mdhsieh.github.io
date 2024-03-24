@@ -381,8 +381,7 @@ struct ContentView: View {
                 FSCalendarView(selectedDate: $selectedDate, achievements: $myAchievements)
                     .frame(height: 500)
                 
-                let sessionsOnDay = myAchievements.sessions.filter { isSameDay($0.startDate, selectedDate) }
-                    .sorted(by: { $0.startDate.compare($1.startDate) == .orderedAscending })
+                let sessionsOnDay = getSessionsOnDay(selectedDate: selectedDate)
                 
                 if sessionsOnDay.count == 0 {
                     Text("No sessions on \(Session.dateFormatter.string(from: selectedDate))")
