@@ -1,7 +1,7 @@
 # Swift, SwiftUI, and Firebase Authentication: Apple Sign In (Part 3)
 _Mar 12, 2024_
 
-<img src="images/writing/apple_sign_in_main.jpg" alt="apple_sign_in_main" width="600"/>
+<img src="images/writing/apple_sign_in_main.jpg" alt="apple_sign_in_main" width="800"/>
 
 ## Intro
 You can use [Firebase Authentication](https://firebase.google.com/docs/auth/ios/start) to make a password account in your iOS app.
@@ -17,26 +17,26 @@ This post is part 3 in a series. Final project code is [here](https://github.com
 ## Setup Apple Firebase Authentication
 In the Firebase console, go to Authentication tab and select Apple
 
-<img src="images/writing/apple_authentication.png" alt="apple_authentication" width="600" />
+<img src="images/writing/apple_authentication.png" alt="apple_authentication" width="800" />
 
 Make sure Enable is checked and Save.
 
-<img src="images/writing/apple_enable.png" alt="apple_enable" width="600" />
+<img src="images/writing/apple_enable.png" alt="apple_enable" width="800" />
 
 In Xcode, go to app icon -> Targets -> Signing & Capabilities, and "+ Capability" to add the Sign in With Apple capability.
 
-<img src="images/writing/apple_capability.png" alt="apple_capability" width="600" />
+<img src="images/writing/apple_capability.png" alt="apple_capability" width="800" />
 
 ## Create Account Screen
 You can use an image for the Apple sign in button. I used the centered Fixed button from [this Figma design file](https://www.figma.com/community/file/945702178038082375).
 
 Open Figma and select the component, then Export to get a zip folder containing the image.
 
-<img src="images/writing/export_figma_button.png" alt="export_figma_button" width="600" />
+<img src="images/writing/export_figma_button.png" alt="export_figma_button" width="800" />
 
 Drag-and-drop the image into the Assets folder. Double-click to rename it AppleButton.
 
-<img src="images/writing/assets_apple_button.png" alt="assets_apple_button" width="600" />
+<img src="images/writing/assets_apple_button.png" alt="assets_apple_button" width="800" />
 
 Now the create account screen needs to be changed to include a button with the image, and also a text to separate Apple sign in from creating a password account.
 

@@ -1,7 +1,7 @@
 # Swift, SwiftUI, and Firebase Authentication: Create Password Account (Part 2)
 _Mar 11, 2024_
 
-<img src="images/writing/password_account_main.jpg" alt="password_account_main_image" width="600"/>
+<img src="images/writing/password_account_main.jpg" alt="password_account_main_image" width="800"/>
 
 ## Intro
 [Firebase Authentication](https://firebase.google.com/docs/auth/ios/start[]) from Google’s [Firebase](https://firebase.google.com/) platform lets users of your app sign in with multiple options. This includes an email and password account or Apple account.
@@ -20,15 +20,15 @@ This assumes you already have an iOS app linked to a Firebase project.
 ## Setup Firebase Authentication
 In the Firebase Console, select "Authentication" to start setting up Firebase Authentication.
 
-<img src="images/writing/authentication.png" alt="authentication" width="600" />
+<img src="images/writing/authentication.png" alt="authentication" width="800" />
 
 Choose “Email/Password” from the list of providers.
 
-<img src="images/writing/email_password.png" alt="email_password" width="600" />
+<img src="images/writing/email_password.png" alt="email_password" width="800" />
 
 Enable the Email option and select Save.
 
-<img src="images/writing/enable_password.png" alt="enable_password" width="600" />
+<img src="images/writing/enable_password.png" alt="enable_password" width="800" />
 
 ## Create Account Screen
 Let’s make a screen to create a password account with a new SwiftUI file. This can be the welcome screen that the user first sees in your app:

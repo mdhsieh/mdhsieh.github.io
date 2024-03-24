@@ -1,7 +1,7 @@
 # Swift, SwiftUI, and Firebase Authentication: Google Sign In (Part 4)
 _Mar 12, 2024_
 
-<img src="images/writing/google_sign_in_main.jpg" alt="google_sign_in_main" width="600"/>
+<img src="images/writing/google_sign_in_main.jpg" alt="google_sign_in_main" width="800"/>
 
 ## Intro
 [Firebase Authentication](https://firebase.google.com/docs/auth/ios/start) gives a lot of options for signing in users. One of the most popular is Google Sign In. Here’s a quick demo of how to do it in an iOS app using SwiftUI.
@@ -15,23 +15,23 @@ This post is part 4 in a series. Final project code is [here](https://github.com
 ## Setup Google Firebase Authentication
 In the [Firebase console](https://console.firebase.google.com/), go to Authentication tab and select Google:
 
-<img src="images/writing/google_authentication.png" alt="google_authentication" width="600" />
+<img src="images/writing/google_authentication.png" alt="google_authentication" width="800" />
 
 Enable and save.
 
-<img src="images/writing/google_enable.png" alt="google_enable" width="600" />
+<img src="images/writing/google_enable.png" alt="google_enable" width="800" />
 
 It will ask you to enter a support e-mail. I just used my Google email:
 
-<img src="images/writing/google_support_email.png" alt="google_support_email" width="600" />
+<img src="images/writing/google_support_email.png" alt="google_support_email" width="800" />
 
 You will be given a new GoogleService-Info.plist file. Download it.
 
-<img src="images/writing/google_service_info.png" alt="google_service_info" width="600" />
+<img src="images/writing/google_service_info.png" alt="google_service_info" width="800" />
 
 Replace your existing file with this new one in Xcode.
 
-<img src="images/writing/google_service_info_replace.png" alt="google_service_info_replace" width="600" />
+<img src="images/writing/google_service_info_replace.png" alt="google_service_info_replace" width="800" />
 
 ## Install GoogleSignIn
 When I wrote this, I found the [documentation](https://firebase.google.com/docs/auth/ios/google-signin) and existing tutorials on Google Sign-In confusing.
@@ -86,17 +86,17 @@ pod install
 
 Open the Xcode project from the newly generated .xcworkspace file.
 
-<img src="images/writing/googlesignin_version.png" alt="googlesignin_version" width="600" />
+<img src="images/writing/googlesignin_version.png" alt="googlesignin_version" width="800" />
 
 When building, you might need to specify your team.
 
-<img src="images/writing/googlesignin_team.png" alt="googlesignin_team" width="600" />
+<img src="images/writing/googlesignin_team.png" alt="googlesignin_team" width="800" />
 
 Now, you need to copy the _reversed client ID_ from your GoogleServices-Info.plist. It should be something like "com.googleusercontent.apps.<project-num-bunch-of-digits-and-letters>".
 
 You then need to go to your project tab->Targets->Info and create a new URL type. In "URL Schemes" field, paste in the reversed client ID:
 
-<img src="images/writing/google_reversed_client_id.png" alt="google_reversed_client_id" width="600" />
+<img src="images/writing/google_reversed_client_id.png" alt="google_reversed_client_id" width="800" />
 
 ## Sign In Functions
 In a previous post I made a class to handle authentication. I called mine AuthService.
@@ -188,15 +188,15 @@ func googleSignOut() {
 ## Create Account Screen
 You can use an image for the Google sign in button. I used the centered Fixed button from [this Figma design file](https://www.figma.com/community/file/945702178038082375).
 
-<img src="images/writing/figma_google_button.png" alt="figma_google_button" width="600" />
+<img src="images/writing/figma_google_button.png" alt="figma_google_button" width="800" />
 
 Open Figma and select the component, then Export to get a zip folder containing the image.
 
-<img src="images/writing/export_figma_google_button.png" alt="export_figma_google_button" width="600" />
+<img src="images/writing/export_figma_google_button.png" alt="export_figma_google_button" width="800" />
 
 Drag-and-drop the image into the Assets folder. Double-click to rename it GoogleButton.
 
-<img src="images/writing/assets_google_button.png" alt="assets_google_button" width="600" />
+<img src="images/writing/assets_google_button.png" alt="assets_google_button" width="800" />
 
 Now change the create account screen to include the Google sign-in button.
 
