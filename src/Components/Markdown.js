@@ -4,6 +4,32 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
 
+import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
+import {tomorrow as CodeStyle} from 'react-syntax-highlighter/dist/esm/styles/prism';
+import SyntaxHighligher from './SyntaxHighlighter';
+
+// Syntax highlighting
+const CodeBlock = ({className, children}) => {
+  let lang = 'swift'; 
+  if (className && className.startsWith('lang-')) {
+    lang = className.replace('lang-', '');
+  }
+  return (
+    <SyntaxHighlighter language={lang} style={CodeStyle}>
+      {children}
+    </SyntaxHighlighter>
+  );
+}
+
+// markdown-to-jsx uses <pre><code/></pre> for code blocks.
+const PreBlock = ({children, ...rest}) => {
+  if ('type' in children && children ['type'] === 'code') {
+    return CodeBlock(children['props']);
+  }
+  return <pre {...rest}>{children}</pre>;
+};
+
+// Markdown
 function MarkdownListItem(props) {
   return <Box component="li" sx={{ mt: 1, typography: 'body1' }} {...props} />;
 }
@@ -42,6 +68,7 @@ const options = {
     li: {
       component: MarkdownListItem,
     },
+    pre: PreBlock,
   },
 };
 
