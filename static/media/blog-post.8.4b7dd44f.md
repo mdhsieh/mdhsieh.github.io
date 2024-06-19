@@ -4,7 +4,7 @@ _Jun 16, 2024_
 
 <img src="images/portfolio/writing-statistics.png" alt="writing_statistics_main_image" width="200"/>
 
-I'm releasing a new iOS app, Writing Statistics. It's to help improve writing habits and visualize your progress with statistics.
+I've released a new iOS app, [Writing Statistics](https://apps.apple.com/app/writing-statistics/id6504376932). It's to help improve writing habits and visualize your progress with statistics.
 
 The idea came because I wanted to improve my own writing in personal projects. I wanted something to motivate me to write more, experiment with a more data-driven approach, and see my habits at a glance. Like bar graphs and daily streaks and similar things.
 
